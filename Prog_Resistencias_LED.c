@@ -1,24 +1,20 @@
+//Fanny Selene Ortiz Blanco 4°B MAAU
+//Programa para calcular las resistencias de los leds
 #include <stdio.h>
-int main(void)
+
+float main()
 {
-int voltage;
-printf("Escribe el valor del voltage ");
-scanf("%d",&voltage);
+    float Vs,R1,R2,R3;
+        printf("\nEscribe el valor del voltaje: \n");
+        scanf("%f",& Vs);
 
-float RLAb;
-float VLAb=2;
-float ILAb=0.02;
-float RLVb;
-float VLVb=3;
-float ILVb=0.02;
-float RLZb;
-float RLRb;
-float VLRb=2;
-float ILRb=0.02;
-printf("Resistencia para Amarrilo Brillante  es %.2f ohm\n" , RLAb);
-RLVb=((float)voltage-(float)VLVb)/(float)ILVb;
-printf("Resistencia para Verde Brillante  es %.2f ohm\n" , RLVb);
-RLRb=((float)voltage-(float)VLRb)/(float)ILRb;
-printf("Resistencia para Rojo Brillante  es %.2f ohm\n" , RLRb);
+        R1=(Vs-2.8)/0.02; //resistencia del led blanco
+        R2=(Vs-1.8)/0.015;//resistencia del led verde std
+        R3=(Vs-3)/0.02;//resistencia del led azul brillante
 
+        printf("\nResistencia del led Blanco es: %.2f \n",R1);
+        printf("\nResistencia del led Verde std es: %.2f \n",R2);
+        printf("\nResistencia del led Azul Brillante es: %.2f \n",R3);
+
+    return 0;
 }

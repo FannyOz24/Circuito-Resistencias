@@ -1,0 +1,29 @@
+//Fanny Selene Ortiz Blanco 4ºB
+//Programa para sacar el promedio de 3 calificaciones
+
+#include<stdio.h>
+int main()
+{
+
+  float calif_1=0,calif_2=0,calif_3=0,promedio=0;
+  printf("\nIntroduce tu primera calificacion: ");
+  scanf("%f",&calif_1);
+  printf("\nIntroduce tu segunda calificacion: ");
+  scanf("%f",&calif_2);
+  printf("\nIntroduce tu tercera calificacion: ");
+  scanf("%f",&calif_3);
+
+
+  promedio=(calif_1+calif_2+calif_3)/3;
+
+  if(promedio<8)
+  {
+   printf("\n\tLo siento, tu promedio de %.2f no es aprobatorio",promedio);
+  }
+  else
+  {
+    printf("\n\tFelicidades, pasaste con un %.2f",promedio);
+  }
+
+  return 0;
+}

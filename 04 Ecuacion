@@ -1,5 +1,5 @@
 //Fanny Selene Ortiz Blanco 4ºB
-//Programa para la solucion de una escuacion cuadratica
+//Programa para la solucion de una ecuacion cuadratica
 #include<stdio.h>
 #include<math.h>
 

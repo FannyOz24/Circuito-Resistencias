@@ -1,0 +1,53 @@
+//Fanny Selene Ortiz Blanco 4ºB
+//Programa para la solucion de una escuacion cuadratica
+#include<stdio.h>
+#include<math.h>
+
+int main(int argc, char** args){
+    float a, b, c, disc, x1, x2, xi, xr; //Variables que utilizaremos
+    //a: es el coeficiente de x al cuadrado
+    //b: es el coeficiente de x
+    //c: es la constante de la ecuacion
+    //disc: es el valor del discriminante
+    //x1, x2: representan los valores de las raices
+    //xi: es la raiz imaginaria
+    //xr: es la raiz real
+    printf("\n\t\tSolucion de una ecuacion cuadratica\n\n"); //El simbolo "\n y \t" son solo para dar espacios o centrar el texto
+    printf("\n Escribe el valor de a: ");
+    scanf("%f", &a); //Almacena el valor de a
+    while(a==0){ //Esto es una "segunda oportunidad" para evitar valores vacios
+    printf("\n El valor de a no puede ser 0 ingrese el valor de nuevo:");
+    scanf("%f", &a); //Almacena el valor de a
+    }
+    printf("\n Escribe el valor de b: ");
+    scanf("%f", &b); //Almacena el valor de b
+     while(b==0){ //Esto es una "segunda oportunidad" para evitar valores vacios
+    printf("\n El valor de b no puede ser 0 ingrese el valor de nuevo:");
+    scanf("%f", &b); //Almacena el valor de b
+    }
+    printf("\n Escribe el valor de c: ");
+    scanf("%f", &c); //Almacena el valor de c
+     while(c==0){ //Esto es una "segunda oportunidad" para evitar valores vacios
+    printf("\n El valor de c no puede ser 0 ingrese el valor de nuevo:");
+    scanf("%f", &c); //Almacena el valor de c
+    }
+    disc=pow(b, 2.0)-4*a*c; //se utilizo la fucion pow que nos sirve para elevar un numero al cuadrado
+    if(disc>0.0){ //si el valor de disc es mayor que 0 entonces directamente pasamos a obtener x1 y x2
+        printf("\n\t\t\tLas dos raices son reales");
+        x1=((-b+sqrt(disc))/(2.0*a));
+        x2=((-b-sqrt(disc))/(2.0*a));
+        printf("\n\t\t\tx1=%.2f   x2=%.2f", x1, x2);
+    }
+    else{
+        if(disc==0.0){ //Si disc es igual a 0 nuestro resutado solo tendra una raiz
+            x1=(-b)/(2.0*a);
+            printf("\n\t\t\tLa ecuacion solo tiene una raiz %.2f", x1);
+        }
+        else{
+            xr=(-b/(2.0*a)); //Si es  menor que 0 obtenemos una raiz real y una raiz imaginaria
+            xi=(sqrt(-disc)/(2.0*a));
+            printf("\n\t\tLa raiz real es %.2f y la imaginaria es %.2f", xr, xi);
+        }
+    }
+    return 0;
+}

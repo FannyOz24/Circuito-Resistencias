@@ -1,0 +1,24 @@
+//Fanny Selene Ortiz Blanco 4º B
+//Programa Serie Nº 2
+#include <stdio.h>
+
+int main()
+{
+    int cont=0;
+    int n;
+    int n1;
+    int n2;
+    {
+    printf("Escribe el valor de n: ");
+    scanf("%d",&n);
+
+n1=n*3;
+n2=n*7+2;
+}
+
+{
+for(cont=n1; cont<=n2; cont=cont+2)
+printf("%d ",cont);
+}
+
+}

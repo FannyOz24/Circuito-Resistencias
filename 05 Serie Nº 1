@@ -8,7 +8,7 @@ int n;
 int n1;
 int n2;
 {
-printf("Escribe un número:\n");
+printf("Escribe el valor de n :");
   scanf("%d", &n);
     n1=n*n;
     n2=-1;
